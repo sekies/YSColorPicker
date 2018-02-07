@@ -1,5 +1,5 @@
 # YSColorPicker
-YSColorPickerは簡単に使えるカラーピッカーライブラリです。
+YSColorPickerは簡単に使えるswift製カラーピッカーライブラリです。
 
 # Features
 - RGB
@@ -41,6 +41,6 @@ YSColorPickerは簡単に使えるカラーピッカーライブラリです。
     - .YS_COLOR_HSBA
 
 4. デリゲートメソッドを実装します。ピッカー上でカラーが変更されるたびにこのメソッドが呼び出されます。
-        func ysChanged(color: UIColor) {
-          btn.backgroundColor = color
+        func ysChanged(color: UIColor) {  
+          btn.backgroundColor = color  
         }
