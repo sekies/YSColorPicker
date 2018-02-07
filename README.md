@@ -24,7 +24,7 @@ import YSColorPicker
 ```
 1. 任意のUIViewContorollerで`YSColorsTabViewControllerDelegate` プロトコルに準拠します。
 ```Swift
-        class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
+class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
 ```
 1. カラーピッカーを使用したいタイミングで`YSColorsTabViewController`インスタンスを生成します。生成時に初期カラーとピッカーのタイプを指定します。  
 ```Swift
