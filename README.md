@@ -1,1 +1,2 @@
 # YSColorPicker
+YSColorPickerは簡単に使えるカラーピッカーライブラリです。
