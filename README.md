@@ -15,10 +15,13 @@ YSColorPickerは簡単に使えるswift製カラーピッカーライブラリ�
 
 1. Podfileに pod `'YSColorPicker', :git => 'https://github.com/sekies/YSColorPicker.git'` と追加します。
 1. pod install します。
-1. インポートします。 `import YSColorPicker`
+
 
 # Usage
-1. `YSColorsTabViewControllerDelegate` を実装します。
+1. YSColorPickerをインポートします。 
+        import YSColorPicker
+1. 任意のUIViewContorollerで`YSColorsTabViewControllerDelegate` プロトコルに準拠します。
+        class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
 1. カラーピッカーを使用したいタイミングで`YSColorsTabViewController`インスタンスを生成します。生成時に初期カラーとピッカーのタイプを指定します。  
 
         let tabvc = YSColorsTabViewController(color: btn.backgroundColor!, colorTypes: [
@@ -29,9 +32,9 @@ YSColorPickerは簡単に使えるswift製カラーピッカーライブラリ�
            	])
 1. カラーピッカーはTabViewControllerとして表示されます。viewの背景色、delegateを設定しモーダルで開きます。  
 ※delegateの設定はysColorDelegateですのでご注意ください。
-        tabvc.view.backgroundColor = .white
-        tabvc.ysColorDelegate = self
-        present(tabvc, animated: true, completion: nil)
+          tabvc.view.backgroundColor = .white
+          tabvc.ysColorDelegate = self
+          present(tabvc, animated: true, completion: nil)
   タイプの指定は以下の6種類から可能です。
     - .YS_COLOR_PICKER,
     - .YS_COLOR_PICKERA,  
@@ -41,6 +44,6 @@ YSColorPickerは簡単に使えるswift製カラーピッカーライブラリ�
     - .YS_COLOR_HSBA
 
 4. デリゲートメソッドを実装します。ピッカー上でカラーが変更されるたびにこのメソッドが呼び出されます。
-        func ysChanged(color: UIColor) {  
-          btn.backgroundColor = color  
-        }
+          func ysChanged(color: UIColor) {  
+            btn.backgroundColor = color  
+          }
