@@ -19,13 +19,13 @@ YSColorPickerは簡単に使えるswift製カラーピッカーライブラリ�
 
 # Usage
 1. YSColorPickerをインポートします。
-  ```Swift
-  import YSColorPicker
-  ```
+ ```Swift
+ import YSColorPicker
+ ```
 1. 任意のUIViewContorollerで`YSColorsTabViewControllerDelegate` プロトコルに準拠します。
-  ```Swift
-  class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
-  ```
+ ```Swift
+ class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
+ ```
 1. カラーピッカーを使用したいタイミングで`YSColorsTabViewController`インスタンスを生成します。生成時に初期カラーとピッカーのタイプを指定します。  
   ```Swift
   let tabvc = YSColorsTabViewController(color: btn.backgroundColor!, colorTypes: [
