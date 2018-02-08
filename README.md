@@ -1,8 +1,9 @@
 # YSColorPicker
-YSColorPickerは簡単に使えるswift製カラーピッカーライブラリです。  
-![screenshot01.png](screenshot1.png)
-![screenshot02.png](screenshot2.png)
-![screenshot03.png](screenshot3.png)
+YSColorPickerは簡単に使えるiOS用のswift製カラーピッカーライブラリです。  
+
+![screenshot01.png](screenshot1.png)　
+![screenshot02.png](screenshot2.png)　
+![screenshot03.png](screenshot3.png)　
 
 # Features
 - RGB
