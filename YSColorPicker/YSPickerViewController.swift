@@ -49,9 +49,9 @@ class YSPickerViewController: YSColorLayoutViewController {
         
         
         
-        self.addChildViewController(picker)
+        self.addChild(picker)
         self.view.addSubview(picker.view)
-        picker.didMove(toParentViewController: self)
+        picker.didMove(toParent: self)
         picker.colorBar.slidedClosure = { (perX:Double) in }
         picker.colorBar.slidedClosureY = { (perX:Double,perY:Double) in
             self.s = CGFloat(perX)
@@ -63,9 +63,9 @@ class YSPickerViewController: YSColorLayoutViewController {
         
         
         
-        self.addChildViewController(hue)
+        self.addChild(hue)
         self.view.addSubview(hue.view)
-        hue.didMove(toParentViewController: self)
+        hue.didMove(toParent: self)
         hue.stepperChangedFunc = { (value:Double) in
             self.h = CGFloat(value/hue.maxValue)
             self.allBarsUpdateAndDelegate()
@@ -77,9 +77,9 @@ class YSPickerViewController: YSColorLayoutViewController {
         }
         
         if let al = alpha{
-            self.addChildViewController(al)
+            self.addChild(al)
             self.view.addSubview(al.view)
-            al.didMove(toParentViewController: self)
+            al.didMove(toParent: self)
             al.stepperChangedFunc = { (value:Double) in
                 self.a = CGFloat(value/al.maxValue)
                 self.allBarsUpdateAndDelegate()

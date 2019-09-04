@@ -83,7 +83,7 @@ class YSColorLayoutViewController: UIViewController {
             let beforeAfterHeight:CGFloat = 30
             let fullWidth = w-marginLR*2
             
-            self.addChildViewController(beforeAfter!)
+            self.addChild(beforeAfter!)
             self.view.addSubview(beforeAfter!.view)
             beforeAfter!.beforeColor = (delegate?.getDefaultColor())!
             if let ac = aftColor{
@@ -91,7 +91,7 @@ class YSColorLayoutViewController: UIViewController {
             }else{
                 beforeAfter!.afterColor = (delegate?.getDefaultColor())!
             }
-            beforeAfter!.didMove(toParentViewController: self)
+            beforeAfter!.didMove(toParent: self)
             beforeAfter!.view.frame = CGRect(x: marginLR, y: marginTB, width: fullWidth, height: beforeAfterHeight)
             beforeAfter!.beforeTapFunc = {
                 self.setNew(color: (self.delegate?.getDefaultColor())!)
@@ -175,7 +175,7 @@ class YSColorLayoutViewController: UIViewController {
     }
     
     func finishing(){
-        beforeAfter?.removeFromParentViewController()
+        beforeAfter?.removeFromParent()
         beforeAfter?.view.removeFromSuperview()
         beforeAfter = nil
         doneBtn.removeFromSuperview()

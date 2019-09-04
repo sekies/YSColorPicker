@@ -75,8 +75,8 @@ public class YSColorsTabViewController: UITabBarController,YSColorLayoutViewCont
         }
         setViewControllers(controllers, animated: false)
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir-Medium", size: 13)!], for: .normal)
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -9)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 13)!], for: .normal)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -9)
     }
     
     func getDefaultColor() -> UIColor{
@@ -98,7 +98,7 @@ public class YSColorsTabViewController: UITabBarController,YSColorLayoutViewCont
         self.dismiss(animated: true, completion: {
             for vc in self.controllers {
                 vc.finishing()
-                vc.removeFromParentViewController()
+                vc.removeFromParent()
             }
             self.controllers.removeAll()
             self.defaultColor = nil

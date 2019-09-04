@@ -59,9 +59,9 @@ class YSRGBViewController: YSColorLayoutViewController {
         
         
         
-        self.addChildViewController(red)
+        self.addChild(red)
         self.view.addSubview(red.view)
-        red.didMove(toParentViewController: self)
+        red.didMove(toParent: self)
         red.stepperChangedFunc = { (value:Double) in
             self.r = CGFloat(value/red.maxValue)
             self.allBarsUpdateAndDelegate()
@@ -76,9 +76,9 @@ class YSRGBViewController: YSColorLayoutViewController {
         
         
         
-        self.addChildViewController(green)
+        self.addChild(green)
         self.view.addSubview(green.view)
-        green.didMove(toParentViewController: self)
+        green.didMove(toParent: self)
         green.stepperChangedFunc = { (value:Double) in
             self.g = CGFloat(value/green.maxValue)
             self.allBarsUpdateAndDelegate()
@@ -92,9 +92,9 @@ class YSRGBViewController: YSColorLayoutViewController {
         
         
         
-        self.addChildViewController(blue)
+        self.addChild(blue)
         self.view.addSubview(blue.view)
-        blue.didMove(toParentViewController: self)
+        blue.didMove(toParent: self)
         blue.stepperChangedFunc = { (value:Double) in
             self.b = CGFloat(value/blue.maxValue)
             self.allBarsUpdateAndDelegate()
@@ -107,9 +107,9 @@ class YSRGBViewController: YSColorLayoutViewController {
         
         
         if let al = alpha{
-            self.addChildViewController(al)
+            self.addChild(al)
             self.view.addSubview(al.view)
-            al.didMove(toParentViewController: self)
+            al.didMove(toParent: self)
             al.stepperChangedFunc = { (value:Double) in
                 self.a = CGFloat(value/al.maxValue)
                 self.allBarsUpdateAndDelegate()
