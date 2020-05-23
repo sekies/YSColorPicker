@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import YSColorPicker
 
 class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
 
@@ -33,14 +32,36 @@ class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
             .YS_COLOR_HSBA
             ])
         tabvc.view.backgroundColor = .white
+        tabvc.modalPresentationStyle = .fullScreen
         tabvc.ysColorDelegate = self
+        
+        if(UIDevice.current.userInterfaceIdiom == .pad){
+            tabvc.modalPresentationStyle = UIModalPresentationStyle.popover
+            tabvc.preferredContentSize = CGSize(width:400, height:600)
+            if let presentationController = tabvc.popoverPresentationController {
+                presentationController.permittedArrowDirections = .any
+                presentationController.sourceView = btn
+                presentationController.sourceRect = btn.bounds
+                presentationController.delegate = self
+                presentationController.backgroundColor = UIColor.darkGray
+            }
+        }
+        
         present(tabvc, animated: true, completion: nil)
     }
     
     func ysChanged(color: UIColor) {
         btn.backgroundColor = color
     }
-    
-
 }
 
+extension ViewController: UIPopoverPresentationControllerDelegate {
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+}

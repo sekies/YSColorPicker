@@ -10,33 +10,38 @@ import UIKit
 
 class YSGradientKnobView: UIView {
     var color:UIColor = .white
+    
+    let barLayer = CALayer()
+    
     init(color:UIColor) {
         super.init(frame: .zero)
         self.color = color
+        makeBar()
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func makeBar() {
+        barLayer.shadowColor = UIColor.black.cgColor
+        barLayer.shadowOffset = CGSize(width:1, height:1)
+        barLayer.shadowOpacity = 0.4
+        barLayer.shadowRadius = 2
+        barLayer.backgroundColor = color.cgColor
+        layer.addSublayer(barLayer)
+    }
     
     func make(_ moveY:Bool = false){
-        self.isUserInteractionEnabled = false
-        let w = self.frame.size.width
-        let h = self.frame.size.height
-        let l = CALayer()
-        l.shadowColor = UIColor.black.cgColor
-        l.shadowOffset = CGSize(width:1, height:1)
-        l.shadowOpacity = 0.4
-        l.shadowRadius = 2
-        
-        l.backgroundColor = color.cgColor
-        self.layer.addSublayer(l)
+        isUserInteractionEnabled = false
+        let w = frame.size.width
+        let h = frame.size.height
+
         if(moveY){
-            l.frame = CGRect(x: -w*0.5, y: -h*0.5, width: w, height: h)
+            barLayer.frame = CGRect(x: -w*0.5, y: -h*0.5, width: w, height: h)
         }else{
-            l.frame = CGRect(x: -w*0.5, y: 0, width: w, height: h)
+            barLayer.frame = CGRect(x: -w*0.5, y: 0, width: w, height: h)
         }
-        self.clipsToBounds = false
+        clipsToBounds = false
     }
 }

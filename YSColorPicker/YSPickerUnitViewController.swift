@@ -89,27 +89,23 @@ class YSPickerUnitViewController: YSUnitViewController {
     
 
     override func viewDidLayoutSubviews() {
-        if(!isInit){
-            isInit = true
-            let w = self.view.frame.size.width
-            let h = self.view.frame.size.height
-            bg.frame = CGRect(x: 0, y: 0, width: w, height: h)
-            bg.backgroundColor = .clear
-            bg.setNeedsDisplay()
-            
-            colorBar.frame = bg.frame
-            colorBarBrightness.frame = bg.frame
-            colorBarBrightness.makeY(colors: pickerBrightnessColors())
-            colorBarBrightness.isUserInteractionEnabled = false
-            knob.frame = CGRect(x: 0, y: 0, width: 9, height: 9)
-            knob.make(true)
-            
-            
-            currentSaturationValue = _currentSaturationValue //入れ直して位置を再計算
-            currentBrightnessValue = _currentBrightnessValue
-            
-            update()
-        }
+        let w = self.view.frame.size.width
+        let h = self.view.frame.size.height
+        bg.frame = CGRect(x: 0, y: 0, width: w, height: h)
+        bg.backgroundColor = .clear
+        bg.setNeedsDisplay()
+        
+        colorBar.frame = bg.frame
+        colorBarBrightness.frame = bg.frame
+        colorBarBrightness.makeY(colors: pickerBrightnessColors())
+        colorBarBrightness.isUserInteractionEnabled = false
+        knob.frame = CGRect(x: 0, y: 0, width: 9, height: 9)
+        knob.make(true)
+        
+        currentSaturationValue = _currentSaturationValue //入れ直して位置を再計算
+        currentBrightnessValue = _currentBrightnessValue
+        
+        update()
     }
     
     override func update(){

@@ -12,8 +12,19 @@
 		9C104D60202989C5006C4AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C104D5E202989C5006C4AB2 /* Main.storyboard */; };
 		9C104D62202989C5006C4AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C104D61202989C5006C4AB2 /* Assets.xcassets */; };
 		9C104D65202989C5006C4AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C104D63202989C5006C4AB2 /* LaunchScreen.storyboard */; };
-		9C104D7120298AB8006C4AB2 /* YSColorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C104D7020298AB8006C4AB2 /* YSColorPicker.framework */; };
-		9C104D7220298AB8006C4AB2 /* YSColorPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C104D7020298AB8006C4AB2 /* YSColorPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9CA942482479139900F44132 /* YSBeforeAfterColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942392479139900F44132 /* YSBeforeAfterColorViewController.swift */; };
+		9CA942492479139900F44132 /* YSColorsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9423A2479139900F44132 /* YSColorsTabViewController.swift */; };
+		9CA9424A2479139900F44132 /* YSGradientKnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9423B2479139900F44132 /* YSGradientKnobView.swift */; };
+		9CA9424B2479139900F44132 /* YSColorUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9423C2479139900F44132 /* YSColorUnitViewController.swift */; };
+		9CA9424C2479139900F44132 /* YSColorLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9423D2479139900F44132 /* YSColorLayoutViewController.swift */; };
+		9CA9424D2479139900F44132 /* YSGradientBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9423E2479139900F44132 /* YSGradientBarView.swift */; };
+		9CA9424E2479139900F44132 /* YSRGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9423F2479139900F44132 /* YSRGBViewController.swift */; };
+		9CA9424F2479139900F44132 /* YSArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942402479139900F44132 /* YSArrowView.swift */; };
+		9CA942502479139900F44132 /* YSUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942412479139900F44132 /* YSUnitViewController.swift */; };
+		9CA942512479139900F44132 /* YSPickerUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942432479139900F44132 /* YSPickerUnitViewController.swift */; };
+		9CA942522479139900F44132 /* YSPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942442479139900F44132 /* YSPickerViewController.swift */; };
+		9CA942532479139900F44132 /* YSHSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942452479139900F44132 /* YSHSBViewController.swift */; };
+		9CA942552479139900F44132 /* YSBarBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA942472479139900F44132 /* YSBarBgView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9C104D7220298AB8006C4AB2 /* YSColorPicker.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +48,20 @@
 		9C104D61202989C5006C4AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C104D64202989C5006C4AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C104D66202989C5006C4AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C104D7020298AB8006C4AB2 /* YSColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YSColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA942392479139900F44132 /* YSBeforeAfterColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSBeforeAfterColorViewController.swift; sourceTree = "<group>"; };
+		9CA9423A2479139900F44132 /* YSColorsTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSColorsTabViewController.swift; sourceTree = "<group>"; };
+		9CA9423B2479139900F44132 /* YSGradientKnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSGradientKnobView.swift; sourceTree = "<group>"; };
+		9CA9423C2479139900F44132 /* YSColorUnitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSColorUnitViewController.swift; sourceTree = "<group>"; };
+		9CA9423D2479139900F44132 /* YSColorLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSColorLayoutViewController.swift; sourceTree = "<group>"; };
+		9CA9423E2479139900F44132 /* YSGradientBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSGradientBarView.swift; sourceTree = "<group>"; };
+		9CA9423F2479139900F44132 /* YSRGBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSRGBViewController.swift; sourceTree = "<group>"; };
+		9CA942402479139900F44132 /* YSArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSArrowView.swift; sourceTree = "<group>"; };
+		9CA942412479139900F44132 /* YSUnitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSUnitViewController.swift; sourceTree = "<group>"; };
+		9CA942422479139900F44132 /* YSColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSColorPicker.h; sourceTree = "<group>"; };
+		9CA942432479139900F44132 /* YSPickerUnitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSPickerUnitViewController.swift; sourceTree = "<group>"; };
+		9CA942442479139900F44132 /* YSPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSPickerViewController.swift; sourceTree = "<group>"; };
+		9CA942452479139900F44132 /* YSHSBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSHSBViewController.swift; sourceTree = "<group>"; };
+		9CA942472479139900F44132 /* YSBarBgView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSBarBgView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C104D7120298AB8006C4AB2 /* YSColorPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +78,7 @@
 		9C104D4E202989C5006C4AB2 = {
 			isa = PBXGroup;
 			children = (
-				9C104D7020298AB8006C4AB2 /* YSColorPicker.framework */,
+				9CA942382479139900F44132 /* YSColorPicker */,
 				9C104D59202989C5006C4AB2 /* Demo */,
 				9C104D58202989C5006C4AB2 /* Products */,
 			);
@@ -81,6 +103,28 @@
 				9C104D66202989C5006C4AB2 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		9CA942382479139900F44132 /* YSColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9CA942392479139900F44132 /* YSBeforeAfterColorViewController.swift */,
+				9CA9423A2479139900F44132 /* YSColorsTabViewController.swift */,
+				9CA9423B2479139900F44132 /* YSGradientKnobView.swift */,
+				9CA9423C2479139900F44132 /* YSColorUnitViewController.swift */,
+				9CA9423D2479139900F44132 /* YSColorLayoutViewController.swift */,
+				9CA9423E2479139900F44132 /* YSGradientBarView.swift */,
+				9CA9423F2479139900F44132 /* YSRGBViewController.swift */,
+				9CA942402479139900F44132 /* YSArrowView.swift */,
+				9CA942412479139900F44132 /* YSUnitViewController.swift */,
+				9CA942422479139900F44132 /* YSColorPicker.h */,
+				9CA942432479139900F44132 /* YSPickerUnitViewController.swift */,
+				9CA942442479139900F44132 /* YSPickerViewController.swift */,
+				9CA942452479139900F44132 /* YSHSBViewController.swift */,
+				9CA942472479139900F44132 /* YSBarBgView.swift */,
+			);
+			name = YSColorPicker;
+			path = ../YSColorPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +160,7 @@
 				TargetAttributes = {
 					9C104D56202989C5006C4AB2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -156,8 +201,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA942482479139900F44132 /* YSBeforeAfterColorViewController.swift in Sources */,
+				9CA9424C2479139900F44132 /* YSColorLayoutViewController.swift in Sources */,
+				9CA9424F2479139900F44132 /* YSArrowView.swift in Sources */,
 				9C104D5D202989C5006C4AB2 /* ViewController.swift in Sources */,
+				9CA942512479139900F44132 /* YSPickerUnitViewController.swift in Sources */,
+				9CA9424E2479139900F44132 /* YSRGBViewController.swift in Sources */,
+				9CA9424B2479139900F44132 /* YSColorUnitViewController.swift in Sources */,
+				9CA9424D2479139900F44132 /* YSGradientBarView.swift in Sources */,
+				9CA942552479139900F44132 /* YSBarBgView.swift in Sources */,
+				9CA942492479139900F44132 /* YSColorsTabViewController.swift in Sources */,
+				9CA942502479139900F44132 /* YSUnitViewController.swift in Sources */,
 				9C104D5B202989C5006C4AB2 /* AppDelegate.swift in Sources */,
+				9CA9424A2479139900F44132 /* YSGradientKnobView.swift in Sources */,
+				9CA942532479139900F44132 /* YSHSBViewController.swift in Sources */,
+				9CA942522479139900F44132 /* YSPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +359,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.smooooth.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -317,7 +375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.smooooth.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -53,6 +53,13 @@ class YSColorUnitViewController: YSUnitViewController {
         self.view.addSubview(colorBar)
         self.view.addSubview(knob)
         
+        stepper.maximumValue = maxValue
+        stepper.minimumValue = minValue
+        stepper.addTarget(
+            self,
+            action: #selector(YSColorUnitViewController.onStepperChange(stepper:)),
+            for: .valueChanged
+        )
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,8 +68,6 @@ class YSColorUnitViewController: YSUnitViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if(!isInit){
-            isInit = true
             let w = self.view.frame.size.width
             let h = self.view.frame.size.height
             let stepperSize = stepper.frame.size
@@ -76,18 +81,8 @@ class YSColorUnitViewController: YSUnitViewController {
             knob.frame = CGRect(x: 0, y: stepperSize.height+margin, width: 2, height: h-(stepperSize.height+margin))
             knob.make()
             
-            
-            stepper.maximumValue = maxValue
-            stepper.minimumValue = minValue
             currentValue = _currentValue //入れ直して位置を再計算
-            
-            stepper.addTarget(
-                self,
-                action: #selector(YSColorUnitViewController.onStepperChange(stepper:)),
-                for: .valueChanged
-            )
             update()
-        }   
     }
     
     override func update(){
