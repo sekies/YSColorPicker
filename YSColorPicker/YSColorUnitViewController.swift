@@ -72,6 +72,7 @@ class YSColorUnitViewController: YSUnitViewController {
             let h = self.view.frame.size.height
             let stepperSize = stepper.frame.size
             label.frame = CGRect(x: 0, y: 0, width: w, height: stepperSize.height)
+            label.textColor = .black
             stepper.frame.origin = CGPoint(x: w-stepperSize.width, y: 0)
             bg.frame = CGRect(x: 0, y: stepperSize.height+margin, width: w, height: h-(stepperSize.height+margin))
             bg.backgroundColor = .clear
