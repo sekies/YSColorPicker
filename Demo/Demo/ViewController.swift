@@ -22,7 +22,7 @@ class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func pushed(_ sender: Any) {
+    @IBAction func pushed(_ sender: UIButton) {
         let tabvc = YSColorsTabViewController(color: btn.backgroundColor!, colorTypes: [
             .YS_COLOR_PICKER,
             .YS_COLOR_PICKERA,
@@ -31,6 +31,21 @@ class ViewController: UIViewController,YSColorsTabViewControllerDelegate {
             .YS_COLOR_HSB,
             .YS_COLOR_HSBA
             ])
+        
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            tabvc.modalPresentationStyle = .popover
+            tabvc.preferredContentSize = CGSize(width: 350.0, height: 550.0)
+            tabvc.popoverPresentationController?.sourceView = sender
+            tabvc.popoverPresentationController?.permittedArrowDirections = .any
+            tabvc.view.backgroundColor = .white
+            tabvc.ysColorDelegate = self
+        } else {
+            tabvc.modalPresentationStyle = .fullScreen
+            tabvc.view.backgroundColor = .white
+            tabvc.ysColorDelegate = self
+        }
+        
         tabvc.view.backgroundColor = .white
         tabvc.modalPresentationStyle = .fullScreen
         tabvc.ysColorDelegate = self
