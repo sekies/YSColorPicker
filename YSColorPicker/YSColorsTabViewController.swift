@@ -79,6 +79,11 @@ public class YSColorsTabViewController: UITabBarController,YSColorLayoutViewCont
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -9)
     }
     
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        finished()
+    }
+    
     func getDefaultColor() -> UIColor{
         return defaultColor
     }
