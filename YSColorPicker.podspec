@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YSColorPicker"
-  s.version      = "1.2"
+  s.version      = "1.2.4"
   s.summary      = "YSColorPicker."
   s.homepage     = "https://github.com/sekies/YSColorPicker"
   s.license      = { :type => "MIT", :file => "LICENSE" }
