@@ -1,0 +1,11 @@
+framework module YSColorPicker {
+  umbrella header "YSColorPicker.h"
+
+  export *
+  module * { export * }
+}
+
+module YSColorPicker.Swift {
+    header "YSColorPicker-Swift.h"
+    requires objc
+}
